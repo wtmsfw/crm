@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(python -c \"from app.models import *; from app.database import engine, Base; Base.metadata.create_all\\(bind=engine\\); print\\('All tables created successfully'\\)\")",
+      "Bash(python -m pip install -r requirements.txt -q)",
+      "Bash(python -c \"from app.main import app; print\\('Routes:', [r.path for r in app.routes]\\)\")",
+      "Bash(rm -f crm.db)",
+      "Bash(python -c ':*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(wc *)"
+    ]
+  }
+}
